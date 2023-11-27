@@ -1,0 +1,284 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&family=Poppins:wght@300&display=swap");
+* {
+  padding: 0px;
+  margin: 0px;
+}
+.header {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  background-image: url(../Assessts/images/bgapp.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+}
+.app-Describe {
+  width: 400px;
+}
+.description {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  color: #404040;
+  text-align: justify;
+  letter-spacing: 1px;
+  line-height: 30px;
+  -webkit-text-stroke: 1px;
+}
+.heading-Box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 50%;
+}
+.logo-Box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.app-Logo {
+  width: 100px;
+  height: 100px;
+  padding-right: 30px;
+}
+.app-Heading {
+  font-family: "Poppins", sans-serif;
+  color: white;
+  font-size: 128px;
+  letter-spacing: 10px;
+  -webkit-text-stroke: 3px;
+}
+.start-Btn {
+  width: 180px;
+  height: 50px;
+  border-radius: 24px;
+  color: white;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  letter-spacing: 2px;
+  -webkit-text-stroke: 0.2px;
+  background-color: #4b6dc1;
+  border-style: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.start-Btn:hover {
+  color: #4169e1;
+  background-color: white;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* HOME PAGE RESPONSIVE */
+
+@media screen and (max-width: 1260px) {
+  .description {
+    font-family: "Poppins", sans-serif;
+    font-size: 13px;
+    color: #404040;
+    text-align: justify;
+    letter-spacing: 1px;
+    line-height: 26px;
+    -webkit-text-stroke: 1px;
+  }
+  .logo-Box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .app-Logo {
+    width: 90px;
+    height: 90px;
+    padding-right: 26px;
+  }
+  .app-Heading {
+    font-family: "Poppins", sans-serif;
+    color: white;
+    font-size: 116px;
+    letter-spacing: 8px;
+    -webkit-text-stroke: 3px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .app-Describe {
+    width: 350px;
+  }
+  .description {
+    font-family: "Poppins", sans-serif;
+    font-size: 13px;
+    color: #404040;
+    text-align: justify;
+    letter-spacing: 1px;
+    line-height: 26px;
+    -webkit-text-stroke: 1px;
+  }
+  .logo-Box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .app-Logo {
+    width: 90px;
+    height: 90px;
+  }
+  .app-Heading {
+    font-family: "Poppins", sans-serif;
+    color: white;
+    font-size: 116px;
+    letter-spacing: 8px;
+    -webkit-text-stroke: 3px;
+  }
+}
+
+@media screen and (max-width: 936px) {
+  .app-Describe {
+    width: 300px;
+  }
+  .description {
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    color: #404040;
+    text-align: justify;
+    letter-spacing: 1px;
+    line-height: 26px;
+    -webkit-text-stroke: 1px;
+  }
+  .logo-Box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .app-Logo {
+    width: 90px;
+    height: 90px;
+  }
+  .app-Heading {
+    font-family: "Poppins", sans-serif;
+    color: white;
+    font-size: 100px;
+    letter-spacing: 8px;
+    -webkit-text-stroke: 3px;
+  }
+  .start-Btn {
+    width: 160px;
+    height: 48px;
+    border-radius: 24px;
+    color: white;
+    font-size: 14px;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    letter-spacing: 2px;
+    -webkit-text-stroke: 0.2px;
+    background-color: #4b6dc1;
+    border-style: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  .start-Btn:hover {
+    color: #4169e1;
+    background-color: white;
+    font-size: 16px;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 826px) {
+  .header {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-evenly;
+  }
+  .heading-Box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .btn-Box {
+    width: 300px;
+    display: flex;
+    justify-content: left;
+  }
+  .description {
+    font-size: 10px;
+    line-height: 20px;
+  }
+  .app-Logo {
+    width: 80px;
+    height: 80px;
+  }
+  .app-Heading {
+    font-size: 70px;
+  }
+  .start-Btn {
+    width: 140px;
+    height: 44px;
+    font-size: 12px;
+  }
+  .start-Btn:hover {
+    color: #4169e1;
+    background-color: white;
+    font-size: 14px;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .header {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-evenly;
+  }
+  .heading-Box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .app-Describe {
+    width: 250px;
+  }
+  .app-Logo {
+    width: 56px;
+    height: 56px;
+    padding-bottom: 12px;
+  }
+  .app-Heading {
+    font-size: 50px;
+    padding-bottom: 12px;
+    -webkit-text-stroke: 0px;
+  }
+  .description {
+    font-family: "Poppins", sans-serif;
+    font-size: 10px;
+    color: ivory;
+    text-align: justify;
+    letter-spacing: 1px;
+    line-height: 18px;
+    -webkit-text-stroke: 0.6px;
+  }
+  .btn-Box {
+    width: 250px;
+    display: flex;
+    justify-content: left;
+  }
+  .start-Btn {
+    width: 126px;
+    height: 40px;
+    font-size: 11px;
+  }
+  .start-Btn:hover {
+    color: #4169e1;
+    background-color: white;
+    font-size: 14px;
+  }
+}
