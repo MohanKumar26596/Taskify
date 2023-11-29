@@ -19,10 +19,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-top-right-radius: 25%;
-  border-bottom-right-radius: 25%;
+  border-top-right-radius: 26%;
+  border-bottom-right-radius: 26%;
+  border-bottom-left-radius: 26%;
 }
-.welcome-text {
+.welcome-Text {
   width: 600px;
   font-family: "Poppins", sans-serif;
   font-size: 42px;
@@ -40,11 +41,12 @@
   color: white;
   text-align: justify;
   padding-bottom: 15px;
+  line-height: 40px;
 }
 .login-text {
   width: 600px;
   font-family: "Poppins", sans-serif;
-  font-size: 22px;
+  font-size: 24px;
   letter-spacing: 2px;
   -webkit-text-stroke: 1.4px;
   color: white;
@@ -68,7 +70,7 @@
   justify-content: center;
   align-items: center;
 }
-.Taskify-Logo {
+.App-Logo {
   width: 68px;
   height: 68px;
   padding-right: 20px;
@@ -85,9 +87,9 @@
   display: flex;
   flex-direction: column;
   font-family: "Poppins", sans-serif;
-  margin: 0px 0px 20px 0px
+  margin: 0px 0px 20px 0px;
 }
-.Login-Heading {
+.greet-Heading {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -113,7 +115,7 @@
   align-items: center;
 }
 .input {
-  width: 296px;
+  width: 350px;
   height: 50px;
   position: relative;
   display: inline-block;
@@ -126,7 +128,7 @@
   transition: border 0.3s ease, color 0.3s ease;
 }
 .input-Field {
-  width: 296px;
+  width: 350px;
   height: 50px;
   border: none;
   outline: none;
@@ -145,10 +147,10 @@
 }
 .eyeClose {
   position: absolute;
-  right: 5px; /* Adjust this value to position the eye icon */
+  right: 5px;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 1; 
+  z-index: 1;
   width: 16px;
   height: 10px;
   display: flex;
@@ -173,7 +175,7 @@
   font-size: 14px;
   color: #7f8184;
   -webkit-text-stroke: 0.8px;
-  letter-spacing: 1px;  
+  letter-spacing: 1px;
   text-decoration: none;
   text-align: center;
   cursor: pointer;
@@ -182,7 +184,7 @@
 .forgot-Text:hover {
   font-size: 16px;
 }
-.login-Btn {
+.submit-Btn {
   width: 350px;
   height: 50px;
   border: 1px solid #4169e1;
@@ -201,13 +203,13 @@
   transition: background-color 0.3s ease, color 0.3s ease;
   cursor: pointer;
 }
-.login-Btn:hover {
+.submit-Btn:hover {
   background-color: #e3e9ff;
   box-shadow: 0 0 10px #4169e1;
   color: #4169e1;
   font-size: 16px;
 }
-.signup-NavigateBox {
+.navigate-Box {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -223,9 +225,9 @@
   letter-spacing: 1px;
   cursor: pointer;
   text-align: center;
-  margin: 8px 0px 
+  margin: 8px 0px;
 }
-.signup-TextNavigate {
+.navigate-Text {
   position: relative;
   font-family: "Poppins", sans-serif;
   font-size: 14px;
@@ -236,7 +238,7 @@
   text-align: center;
   transition: font-size 0.3s ease, color 0.3s ease;
 }
-.signup-TextNavigate::before {
+.navigate-Text::before {
   content: "";
   position: absolute;
   left: 0;
@@ -248,11 +250,11 @@
   transform-origin: bottom left;
   transition: transform 0.3s ease;
 }
-.signup-TextNavigate:hover::before {
+.navigate-Text:hover::before {
   transform: scaleX(1);
 }
-.signup-TextNavigate:hover {
-  text-decoration: none; 
+.navigate-Text:hover {
+  text-decoration: none;
 }
 
 /* LOGIN PAGE RESPONSIVE */
@@ -262,15 +264,11 @@
     width: 100%;
     height: 100vh;
   }
-  .login-Content {
-    width: 50%;
-    height: 100vh;
-  } 
   .welcome-Board {
     box-sizing: border-box;
     padding: 30px 50px;
   }
-  .welcome-text {
+  .welcome-Text {
     width: 100%;
     font-size: 40px;
   }
@@ -280,20 +278,24 @@
   }
   .login-text {
     width: 100%;
-    font-size: 20px;
+    font-size: 22px;
   }
-  .Taskify-Logo {
+  .login-Content {
+    width: 50%;
+    height: 100vh;
+  }
+  .App-Logo {
     width: 64px;
     height: 64px;
     padding-right: 20px;
   }
   .App-Heading {
-    font-size: 76px;
+    font-size: 78px;
   }
   .greeting-Box {
     width: 100%;
   }
-  .Login-Heading {
+  .greet-Heading {
     font-size: 36px;
   }
   .greet-Inform {
@@ -304,11 +306,23 @@
     width: 100%;
   }
   .input {
-    margin: 14px 0px;
-  }
-  .login-Btn {
     width: 330px;
     height: 50px;
+    margin: 14px 0px;
+  }
+  .input-Field {
+    width: 330px;
+    height: 50px;
+  }
+  .submit-Btn {
+    width: 330px;
+    height: 50px;
+  }
+  .no-Account {
+    font-size: 13.5px;
+  }
+  .navigate-Text {
+    font-size: 13.5px;
   }
 }
 
@@ -321,22 +335,23 @@
     box-sizing: border-box;
     padding: 30px 50px;
   }
-  .welcome-text {
+  .welcome-Text {
     width: 100%;
     font-size: 36px;
   }
   .welcome-Para {
     width: 100%;
     font-size: 16px;
+    line-height: 30px;
   }
   .login-text {
     width: 100%;
-    font-size: 16px;
+    font-size: 18px;
   }
   .Logo-Box {
     width: 400px;
   }
-  .Taskify-Logo {
+  .App-Logo {
     width: 56px;
     height: 56px;
     padding-right: 16px;
@@ -347,7 +362,7 @@
   .greeting-Box {
     width: 100%;
   }
-  .Login-Heading {
+  .greet-Heading {
     font-size: 34px;
   }
   .greet-Inform {
@@ -355,13 +370,219 @@
     font-size: 14px;
   }
   .form {
+    width: 350px;
+  }
+  .input {
+    width: 300px;
+    height: 50px;
+    margin: 14px 0px;
+  }
+  .input-Field {
+    width: 300px;
+    height: 50px;
+  }
+  .submit-Btn {
+    width: 300px;
+    height: 50px;
+  }
+  .no-Account {
+    font-size: 13px;
+  }
+  .navigate-Text {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .login-Page {
+    width: 100%;
+    height: 100vh;
+  }
+  .welcome-Board {
+    width: 50%;
+    height: 100vh;
+    box-sizing: border-box;
+    padding: 30px 30px;
+    border-top-right-radius: 22%;
+    border-bottom-right-radius: 22%;
+    border-bottom-left-radius: 22%;
+  }
+  .welcome-Text {
+    width: 100%;
+    font-size: 30px;
+  }
+  .welcome-Para {
+    width: 100%;
+    font-size: 14px;
+    line-height: 30px;
+  }
+  .login-text {
+    width: 100%;
+    font-size: 16px;
+  }
+  .login-Content {
+    width: 50%;
+    height: 100vh;
+  }
+  .Logo-Box {
+    width: 350px;
+  }
+  .App-Logo {
+    width: 40px;
+    height: 40px;
+    padding-right: 12px;
+  }
+  .App-Heading {
+    font-size: 48px;
+    -webkit-text-stroke: 1.8px;
+    letter-spacing: 4px;
+  }
+  .greeting-Box {
+    width: 100%;
+  }
+  .greet-Heading {
+    font-size: 26px;
+  }
+  .greet-Inform {
+    width: 100%;
+    font-size: 13px;
+  }
+  .form {
     width: 100%;
   }
   .input {
+    width: 260px;
+    height: 46px;
     margin: 14px 0px;
   }
-  .login-Btn {
-    width: 330px;
-    height: 50px;
+  .input-Field {
+    width: 260px;
+    height: 46px;
+  }
+  .forgot-Box {
+    width: 100%;
+    height: 26px;
+  }
+  .forgot-Text {
+    font-size: 12px;
+  }
+  .forgot-Text:hover {
+    font-size: 14px;
+  }
+  .submit-Btn {
+    width: 260px;
+    height: 46px;
+    font-size: 14px;
+  }
+  .submit-Btn:hover {
+    background-color: #e3e9ff;
+    box-shadow: 0 0 10px #4169e1;
+    color: #4169e1;
+    font-size: 14px;
+  }
+  .no-Account {
+    font-size: 13px;
+  }
+  .navigate-Text {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .login-Page {
+    width: 100%;
+    height: 200vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .welcome-Board {
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    padding: 30px 40px;
+    border-top-right-radius: 24%;
+    border-bottom-right-radius: 24%;
+    border-bottom-left-radius: 24%;
+  }
+  .welcome-Text {
+    width: 100%;
+    font-size: 30px;
+  }
+  .welcome-Para {
+    width: 100%;
+    font-size: 14px;
+    line-height: 28px;
+  }
+  .login-text {
+    width: 100%;
+    font-size: 16px;
+  }
+  .login-Content {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .Logo-Box {
+    width: 350px;
+  }
+  .App-Logo {
+    width: 36px;
+    height: 36px;
+    padding-right: 10px;
+  }
+  .App-Heading {
+    font-size: 48px;
+  }
+  .greeting-Box {
+    width: 100%;
+  }
+  .greet-Heading {
+    font-size: 24px;
+    padding-bottom: 8px;
+  }
+  .greet-Inform {
+    width: 100%;
+    font-size: 12px;
+  }
+  .form {
+    width: 100%;
+  }
+  .input {
+    width: 250px;
+    height: 42px;
+    margin: 18px 0px;
+  }
+  .input-Field {
+    width: 250px;
+    height: 42px;
+  }
+  .forgot-Box {
+    width: 100%;
+    height: 26px;
+  }
+  .forgot-Text {
+    font-size: 12px;
+  }
+  .forgot-Text:hover {
+    font-size: 14px;
+  }
+  .submit-Btn {
+    width: 250px;
+    height: 42px;
+    font-size: 14px;
+  }
+  .submit-Btn:hover {
+    background-color: #e3e9ff;
+    box-shadow: 0 0 10px #4169e1;
+    color: #4169e1;
+    font-size: 14px;
+  }
+  .no-Account {
+    font-size: 12px;
+  }
+  .navigate-Text {
+    font-size: 12px;
   }
 }

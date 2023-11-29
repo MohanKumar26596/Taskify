@@ -3,9 +3,9 @@ import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 // import Login from "./LoginPage/Login";
 // import Signup from "./SignupPage/Signup";
-import ToDoList from "./ToDoList/ToDoList";
 import HomePage from "./HomePage/HomePage";
 import AccessPage from "./AccessPage/AccessPage";
+import TaskPage from "./TaskPage/TaskPage";
 
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/LoginPage" Component={AccessPage} />
           <Route path="/SignupPage" Component={AccessPage} />
-          <Route path="ToDoListPage" element={<ToDoList />} />
+          <Route path="TaskPage" element={<TaskPage />} />
           <Route path="AccessPage" element={<AccessPage />} />
           {/* <Route path="MyAccount" element={<MyAccount />} /> */}
         </Routes>

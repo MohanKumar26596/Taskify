@@ -19,7 +19,7 @@ function Login() {
   return (
     <div className="login-Page">
       <div className="welcome-Board">
-        <h3 className="welcome-text">Get things done with Taskify</h3>
+        <h3 className="welcome-Text">Get things done with Taskify</h3>
         <p className="welcome-Para">
           Time to organize your day, set priorities, and thrive. Get ready to
           boost your productivity and organize your life effortlessly with our
@@ -32,11 +32,11 @@ function Login() {
 
       <div className="login-Content">
         <div className="Logo-Box">
-          <img src={TaskifyLogo} alt="TaskifyLogo" className="Taskify-Logo" />
+          <img src={TaskifyLogo} alt="TaskifyLogo" className="App-Logo" />
           <h1 className="App-Heading">TASKiFY</h1>
         </div>
         <div className="greeting-Box">
-          <h3 className="Login-Heading"> Welcome, Login</h3>
+          <h3 className="greet-Heading">Welcome, Login</h3>
           <p className="greet-Inform">
             Please input your details to access the Tasks.
           </p>
@@ -69,12 +69,12 @@ function Login() {
           <div className="forgot-Box">
             <p className="forgot-Text">Forgot Password</p>
           </div>
-          <button type="submit" className="login-Btn">
+          <button type="submit" className="submit-Btn">
             Login
           </button>
-          <div className="signup-NavigateBox">
+          <div className="navigate-Box">
             <p className="no-Account">You don’t have an account?</p>
-            <p onClick={() => goToSignupPage()} className="signup-TextNavigate">
+            <p onClick={() => goToSignupPage()} className="navigate-Text">
               Signup here
             </p>
           </div>
