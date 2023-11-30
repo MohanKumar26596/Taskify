@@ -13,7 +13,7 @@ function AccessPage() {
         width: "200%",
         height: "100vh",
         display: "flex",
-        transition: "transform 0.8s cubic-bezier(0.4, 0, 0.2, 1)",
+        transition: "transform 1s cubic-bezier(0.4, 0, 0.2, 1)",
         transform: `translateX(${
           location.pathname === "/SignupPage" ? "-50%" : 0
         })`,

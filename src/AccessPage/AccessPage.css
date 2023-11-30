@@ -15,6 +15,10 @@
   height: 100vh;
   flex: 0 0 50%;
   overflow: hidden;
+  background-image: url(../Assessts/images/appBG.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /* ACCESS PAGE RESPONSIVE */

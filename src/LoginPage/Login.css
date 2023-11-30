@@ -8,9 +8,30 @@
   height: 100vh;
   display: flex;
   flex-direction: row;
-  background-color: #e3e9ff;
+  /* background-color: #e3e9ff; */
   font-family: "Poppins", sans-serif;
 }
+.login-Card {
+  width: 510px;
+  height: 630px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 70px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 70px;
+  border-bottom-right-radius: 70px;
+  background-color: #e3e9ff;
+  box-shadow: 0 0 10px #4169e1;
+  transition: box-shadow 0.4s ease, color 0.4s ease;
+}
+.login-Card:hover {
+  box-shadow: 0 0 18px #4169e1;
+}
+
+/* LOGIN GREETING CONTENT */
+
 .welcome-Board {
   width: 50%;
   height: 100vh;
@@ -97,6 +118,7 @@
   color: #7f8184;
   -webkit-text-stroke: 1px;
   letter-spacing: 1.3px;
+  padding-bottom: 8px;
 }
 .greet-Inform {
   width: 100%;
@@ -122,6 +144,7 @@
   justify-content: space-between;
   align-items: center;
   border-radius: 20px;
+  border-top-right-radius: 3px;
   border: 1px solid #4169e1;
   background-color: white;
   margin: 16px 0px;
@@ -133,6 +156,7 @@
   border: none;
   outline: none;
   border-radius: 20px;
+  border-top-right-radius: 3px;
   box-sizing: border-box;
   padding: 10px;
   font-size: 15px;
@@ -189,6 +213,7 @@
   height: 50px;
   border: 1px solid #4169e1;
   border-radius: 20px;
+  border-top-right-radius: 3px;
   background: #4169e1;
   color: white;
   box-sizing: border-box;
@@ -264,6 +289,14 @@
     width: 100%;
     height: 100vh;
   }
+  .login-Card {
+    width: 470px;
+    height: 630px;
+    border-top-left-radius: 70px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 70px;
+    border-bottom-right-radius: 70px;
+  }
   .welcome-Board {
     box-sizing: border-box;
     padding: 30px 50px;
@@ -331,6 +364,14 @@
     width: 100%;
     height: 100vh;
   }
+  .login-Card {
+    width: 430px;
+    height: 610px;
+    border-top-left-radius: 70px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 70px;
+    border-bottom-right-radius: 70px;
+  }
   .welcome-Board {
     box-sizing: border-box;
     padding: 30px 50px;
@@ -364,6 +405,7 @@
   }
   .greet-Heading {
     font-size: 34px;
+    padding-bottom: 8px;
   }
   .greet-Inform {
     width: 100%;
@@ -393,10 +435,18 @@
   }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 960px) {
   .login-Page {
     width: 100%;
     height: 100vh;
+  }
+  .login-Card {
+    width: 360px;
+    height: 550px;
+    border-top-left-radius: 60px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
   }
   .welcome-Board {
     width: 50%;
@@ -442,6 +492,7 @@
   }
   .greet-Heading {
     font-size: 26px;
+    padding-bottom: 6px;
   }
   .greet-Inform {
     width: 100%;
@@ -488,21 +539,30 @@
   }
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 780px) {
   .login-Page {
     width: 100%;
     height: 200vh;
     display: flex;
     flex-direction: column;
   }
+  .login-Card {
+    width: 308px;
+    height: 530px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+  }
   .welcome-Board {
     width: 100%;
     height: 100vh;
     box-sizing: border-box;
     padding: 30px 40px;
-    border-top-right-radius: 24%;
-    border-bottom-right-radius: 24%;
-    border-bottom-left-radius: 24%;
+    border-top-left-radius: 0%;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
   }
   .welcome-Text {
     width: 100%;
@@ -557,6 +617,7 @@
   .input-Field {
     width: 250px;
     height: 42px;
+    font-size: 14px;
   }
   .forgot-Box {
     width: 100%;

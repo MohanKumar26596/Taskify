@@ -11,8 +11,26 @@
   background-color: #e3e9ff;
   font-family: "Poppins", sans-serif;
 }
+.signup-Card {
+  width: 510px;
+  height: 660px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 0%;
+  border-top-right-radius: 70px;
+  border-bottom-left-radius: 70px;
+  border-bottom-right-radius: 70px;
+  background-color: #e3e9ff;
+  box-shadow: 0 0 10px #4169e1;
+  transition: box-shadow 0.4s ease, color 0.4s ease;
+}
+.signup-Card:hover {
+  box-shadow: 0 0 18px #4169e1;
+}
 
-/* LOGIN GREETING CONTENT */
+/* SIGNUP GREETING CONTENT */
 
 .Welcome-Board {
   width: 50%;
@@ -52,7 +70,7 @@
   font-size: 24px;
   letter-spacing: 2px;
   -webkit-text-stroke: 1.4px;
-  color: white;
+  color: #e3e9ff;
   cursor: pointer;
 }
 
@@ -100,6 +118,7 @@
   color: #7f8184;
   -webkit-text-stroke: 1px;
   letter-spacing: 1.3px;
+  padding-bottom: 8px;
 }
 .greet-Inform {
   width: 100%;
@@ -117,7 +136,7 @@
   justify-content: center;
   align-items: center;
 }
-.input {
+.Input {
   width: 350px;
   height: 50px;
   position: relative;
@@ -125,17 +144,19 @@
   justify-content: space-between;
   align-items: center;
   border-radius: 20px;
+  border-top-left-radius: 3px;
   border: 1px solid #4169e1;
   background-color: white;
   margin: 16px 0px;
   /* transition: border 3s ease, color 3s ease; */
 }
-.input-Field {
+.Input-Field {
   width: 350px;
   height: 50px;
   border: none;
   outline: none;
   border-radius: 20px;
+  border-top-left-radius: 3px;
   box-sizing: border-box;
   padding: 10px;
   font-size: 15px;
@@ -145,7 +166,7 @@
   justify-content: right;
   transition: border 5s ease, color 5s ease;
 }
-.input-Field:hover {
+.Input-Field:hover {
   border: 1.3px solid #4169e1;
 }
 .eyeClose {
@@ -165,11 +186,12 @@
 .eyeClose:hover {
   color: #4169e1;
 }
-.submit-Btn {
+.Submit-Btn {
   width: 350px;
   height: 50px;
   border: 1px solid #4169e1;
   border-radius: 20px;
+  border-top-left-radius: 3px;
   background-color: #4169e1;
   color: white;
   box-sizing: border-box;
@@ -184,7 +206,7 @@
   cursor: pointer;
   transition: background-color 0.5s ease, color 0.5s ease;
 }
-.submit-Btn:hover {
+.Submit-Btn:hover {
   background-color: #e3e9ff;
   box-shadow: 0 0 10px #4169e1;
   color: #4169e1;
@@ -245,6 +267,14 @@
     width: 100%;
     height: 100vh;
   }
+  .signup-Card {
+    width: 470px;
+    height: 630px;
+    border-top-left-radius: 0%;
+    border-top-right-radius: 70px;
+    border-bottom-left-radius: 70px;
+    border-bottom-right-radius: 70px;
+  }
   .Welcome-Board {
     box-sizing: border-box;
     padding: 30px 50px;
@@ -286,16 +316,16 @@
   .form {
     width: 100%;
   }
-  .input {
+  .Input {
     width: 330px;
     height: 50px;
     margin: 14px 0px;
   }
-  .input-Field {
+  .Input-Field {
     width: 330px;
     height: 50px;
   }
-  .submit-Btn {
+  .Submit-Btn {
     width: 330px;
     height: 50px;
   }
@@ -311,6 +341,14 @@
   .signup-Page {
     width: 100%;
     height: 100vh;
+  }
+  .signup-Card {
+    width: 430px;
+    height: 610px;
+    border-top-left-radius: 0%;
+    border-top-right-radius: 70px;
+    border-bottom-left-radius: 70px;
+    border-bottom-right-radius: 70px;
   }
   .Welcome-Board {
     box-sizing: border-box;
@@ -348,6 +386,7 @@
   }
   .greet-Heading {
     font-size: 34px;
+    padding-bottom: 8px;
   }
   .greet-Inform {
     width: 100%;
@@ -356,16 +395,16 @@
   .form {
     width: 350px;
   }
-  .input {
+  .Input {
     width: 300px;
     height: 50px;
     margin: 14px 0px;
   }
-  .input-Field {
+  .Input-Field {
     width: 300px;
     height: 50px;
   }
-  .submit-Btn {
+  .Submit-Btn {
     width: 300px;
     height: 50px;
   }
@@ -377,10 +416,18 @@
   }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 960px) {
   .signup-Page {
     width: 100%;
     height: 100vh;
+  }
+  .signup-Card {
+    width: 360px;
+    height: 550px;
+    border-top-left-radius: 0%;
+    border-top-right-radius: 60px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
   }
   .Welcome-Board {
     width: 50%;
@@ -426,6 +473,7 @@
   }
   .greet-Heading {
     font-size: 26px;
+    padding-bottom: 6px;
   }
   .greet-Inform {
     width: 100%;
@@ -434,12 +482,12 @@
   .form {
     width: 350px;
   }
-  .input {
+  .Input {
     width: 260px;
     height: 46px;
     margin: 14px 0px;
   }
-  .input-Field {
+  .Input-Field {
     width: 260px;
     height: 46px;
   }
@@ -453,12 +501,12 @@
   .forgot-Text:hover {
     font-size: 14px;
   }
-  .submit-Btn {
+  .Submit-Btn {
     width: 260px;
     height: 46px;
     font-size: 14px;
   }
-  .submit-Btn:hover {
+  .Submit-Btn:hover {
     background-color: #e3e9ff;
     box-shadow: 0 0 10px #4169e1;
     color: #4169e1;
@@ -472,12 +520,20 @@
   }
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 780px) {
   .signup-Page {
     width: 100%;
     height: 200vh;
     display: flex;
     flex-direction: column-reverse;
+  }
+  .signup-Card {
+    width: 308px;
+    height: 540px;
+    border-top-left-radius: 0%;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
   }
   .Welcome-Board {
     width: 100%;
@@ -535,14 +591,15 @@
   .form {
     width: 100%;
   }
-  .input {
+  .Input {
     width: 250px;
     height: 42px;
     margin: 18px 0px;
   }
-  .input-Field {
+  .Input-Field {
     width: 250px;
     height: 42px;
+    font-size: 14px;
   }
   .forgot-Box {
     width: 100%;
@@ -554,12 +611,12 @@
   .forgot-Text:hover {
     font-size: 14px;
   }
-  .submit-Btn {
+  .Submit-Btn {
     width: 250px;
     height: 42px;
     font-size: 14px;
   }
-  .submit-Btn:hover {
+  .Submit-Btn:hover {
     background-color: #e3e9ff;
     box-shadow: 0 0 10px #4169e1;
     color: #4169e1;
