@@ -13,6 +13,11 @@ function Login() {
     console.log("Navigate to Signup Page");
   };
 
+  const goToTaskPage = () => {
+    navigate("/TaskPage");
+    console.log("Navigate to Task Page");
+  };
+
   const handleTogglePassword = () => {
     setShowPassword(!showPassword);
   };
@@ -37,7 +42,7 @@ function Login() {
             <h1 className="App-Heading">TASKiFY</h1>
           </div>
           <div className="greeting-Box">
-            <h3 className="greet-Heading">Welcome, Login</h3>
+            <h3 className="greet-Heading" onClick={() => goToTaskPage()}>Welcome, Login</h3>
             <p className="greet-Inform">
               Please input your details to access the Tasks.
             </p>

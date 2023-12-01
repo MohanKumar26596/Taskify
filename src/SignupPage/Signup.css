@@ -8,7 +8,6 @@
   height: 100vh;
   display: flex;
   flex-direction: row;
-  background-color: #e3e9ff;
   font-family: "Poppins", sans-serif;
 }
 .signup-Card {
@@ -18,7 +17,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-top-left-radius: 0%;
+  border-top-left-radius: 4px;
   border-top-right-radius: 70px;
   border-bottom-left-radius: 70px;
   border-bottom-right-radius: 70px;
@@ -145,10 +144,15 @@
   align-items: center;
   border-radius: 20px;
   border-top-left-radius: 3px;
-  border: 1px solid #4169e1;
+  border: 1.5px solid #4169e1;
   background-color: white;
   margin: 16px 0px;
-  /* transition: border 3s ease, color 3s ease; */
+  outline: none;
+  transition: box-shadow 0.4s ease, border 0.4s ease-in-out;
+}
+.Input:hover {
+  border: 1.4px solid #e3e9ff;
+  box-shadow: 0 0 3px #4169e1;
 }
 .Input-Field {
   width: 350px;
@@ -164,10 +168,10 @@
   display: flex;
   align-items: center;
   justify-content: right;
-  transition: border 5s ease, color 5s ease;
+  transition: border 0.3s ease, color 0.3s ease;
 }
 .Input-Field:hover {
-  border: 1.3px solid #4169e1;
+  box-shadow: 0 0 4px #4169e1;
 }
 .eyeClose {
   position: absolute;
@@ -189,10 +193,10 @@
 .Submit-Btn {
   width: 350px;
   height: 50px;
-  border: 1px solid #4169e1;
   border-radius: 20px;
   border-top-left-radius: 3px;
   background-color: #4169e1;
+  border-style: none;
   color: white;
   box-sizing: border-box;
   padding: 10px;
@@ -204,11 +208,11 @@
   align-items: center;
   margin: 16px 0px 22px 0px;
   cursor: pointer;
-  transition: background-color 0.5s ease, color 0.5s ease;
+  transition: background-color 0.5s ease, box-shadow 0.5s ease;
 }
 .Submit-Btn:hover {
   background-color: #e3e9ff;
-  box-shadow: 0 0 10px #4169e1;
+  box-shadow: 0 0 6px #4169e1;
   color: #4169e1;
   font-size: 16px;
 }
@@ -270,7 +274,7 @@
   .signup-Card {
     width: 470px;
     height: 630px;
-    border-top-left-radius: 0%;
+    border-top-left-radius: 4px;
     border-top-right-radius: 70px;
     border-bottom-left-radius: 70px;
     border-bottom-right-radius: 70px;
@@ -345,7 +349,7 @@
   .signup-Card {
     width: 430px;
     height: 610px;
-    border-top-left-radius: 0%;
+    border-top-left-radius: 3px;
     border-top-right-radius: 70px;
     border-bottom-left-radius: 70px;
     border-bottom-right-radius: 70px;
@@ -424,7 +428,7 @@
   .signup-Card {
     width: 360px;
     height: 550px;
-    border-top-left-radius: 0%;
+    border-top-left-radius: 3px;
     border-top-right-radius: 60px;
     border-bottom-left-radius: 60px;
     border-bottom-right-radius: 60px;
@@ -530,7 +534,7 @@
   .signup-Card {
     width: 308px;
     height: 540px;
-    border-top-left-radius: 0%;
+    border-top-left-radius: 3px;
     border-top-right-radius: 50px;
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;

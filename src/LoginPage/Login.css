@@ -8,7 +8,6 @@
   height: 100vh;
   display: flex;
   flex-direction: row;
-  /* background-color: #e3e9ff; */
   font-family: "Poppins", sans-serif;
 }
 .login-Card {
@@ -19,15 +18,15 @@
   justify-content: center;
   align-items: center;
   border-top-left-radius: 70px;
-  border-top-right-radius: 0px;
+  border-top-right-radius: 4px;
   border-bottom-left-radius: 70px;
   border-bottom-right-radius: 70px;
   background-color: #e3e9ff;
   box-shadow: 0 0 10px #4169e1;
-  transition: box-shadow 0.4s ease, color 0.4s ease;
+  transition: box-shadow 0.3s ease, color 0.3s ease;
 }
 .login-Card:hover {
-  box-shadow: 0 0 18px #4169e1;
+  box-shadow: 0 0 20px hsl(225, 73%, 57%);
 }
 
 /* LOGIN GREETING CONTENT */
@@ -145,10 +144,15 @@
   align-items: center;
   border-radius: 20px;
   border-top-right-radius: 3px;
-  border: 1px solid #4169e1;
-  background-color: white;
+  border: 1.5px solid #4169e1;
+  background-color: #e3e9ff;
   margin: 16px 0px;
-  transition: border 0.3s ease, color 0.3s ease;
+  outline: none;
+  transition: box-shadow 0.4s ease, border 0.4s ease-in-out;
+}
+.input:hover {
+  border: 1.4px solid #e3e9ff;
+  box-shadow: 0 0 3px #4169e1;
 }
 .input-Field {
   width: 350px;
@@ -166,8 +170,8 @@
   justify-content: right;
   transition: border 0.3s ease, color 0.3s ease;
 }
-.input-Field:hover {
-  border: 2px solid #4169e1;
+.input-Field:hover {  
+  box-shadow: 0 0 4px #4169e1;
 }
 .eyeClose {
   position: absolute;
@@ -211,9 +215,9 @@
 .submit-Btn {
   width: 350px;
   height: 50px;
-  border: 1px solid #4169e1;
   border-radius: 20px;
   border-top-right-radius: 3px;
+  border-style: none;
   background: #4169e1;
   color: white;
   box-sizing: border-box;
@@ -225,12 +229,12 @@
   justify-content: center;
   align-items: center;
   margin: 16px 0px 22px 0px;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.5s ease, box-shadow 0.5s ease;
   cursor: pointer;
 }
 .submit-Btn:hover {
   background-color: #e3e9ff;
-  box-shadow: 0 0 10px #4169e1;
+  box-shadow: 0 0 6px #4169e1;
   color: #4169e1;
   font-size: 16px;
 }
@@ -293,7 +297,7 @@
     width: 470px;
     height: 630px;
     border-top-left-radius: 70px;
-    border-top-right-radius: 0px;
+    border-top-right-radius: 4px;
     border-bottom-left-radius: 70px;
     border-bottom-right-radius: 70px;
   }
@@ -368,7 +372,7 @@
     width: 430px;
     height: 610px;
     border-top-left-radius: 70px;
-    border-top-right-radius: 0px;
+    border-top-right-radius: 3px;
     border-bottom-left-radius: 70px;
     border-bottom-right-radius: 70px;
   }
@@ -444,7 +448,7 @@
     width: 360px;
     height: 550px;
     border-top-left-radius: 60px;
-    border-top-right-radius: 0px;
+    border-top-right-radius: 3px;
     border-bottom-left-radius: 60px;
     border-bottom-right-radius: 60px;
   }
@@ -550,7 +554,7 @@
     width: 308px;
     height: 530px;
     border-top-left-radius: 50px;
-    border-top-right-radius: 0px;
+    border-top-right-radius: 3px;
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
   }
