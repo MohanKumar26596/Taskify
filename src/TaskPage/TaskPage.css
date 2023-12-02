@@ -5,18 +5,60 @@
 .task-Page {
   width: 100%;
   height: 100vh;
-  background-image: url(../Assessts/images/appbackground.jpg);
+  background-image: url(../Assessts/images/7561340.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  /* align-items: ; */
+  box-sizing: border-box;
+  padding: 30px;
+}
+.left-TaskPage {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+/* APPLOGO FOR INPUT CARD */
+
+.appLogo-Card {
+  width: 628px;
+  height: 110px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  background-color: #4169e1;
+  box-shadow: 0 0 6px #e3e9ff;
+  padding: 12px;
+  gap: 14px;
+}
+.appLogo {
+  width: 64px;
+  height: 62px;
+}
+.appLogo-Name {
+  font-family: "Poppins", sans-serif;
+  font-size: 78px;
+  color: white;
+  -webkit-text-stroke: 0.6px;
+  letter-spacing: 0.8px;
 }
 
 /* TASK INPUT CARD */
 
 .task-InputCard {
-  width: 700px;
-  height: 470px;
+  width: 650px;
+  height: 450px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -26,29 +68,30 @@
   border-bottom-left-radius: 70px;
   border-bottom-right-radius: 70px;
   box-sizing: border-box;
-  padding: 20px;
-  /* box-shadow: 0 0 10px #4169e1; */
+  padding: 10px;
   /* background-color: #e3e9ff; */
+  /* box-shadow: 0 0 10px #4169e1; */
   /* transition: 3s ease, color 3s ease; */
 }
+
 .task-Inputs {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
 }
 .task-Form {
-  width: 700px;
-  height: 470px;
+  width: 650px;
+  height: 450px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   border-top-left-radius: 4px;
   border-top-right-radius: 70px;
   border-bottom-left-radius: 70px;
   border-bottom-right-radius: 70px;
   background-color: #e3e9ff;
   box-sizing: border-box;
-  padding: 26px;
+  padding: 24px;
   box-shadow: 0 0 4px #4169e1;
   transition: box-shadow 0.8s ease, color 0.8s ease;
 }
@@ -56,32 +99,46 @@
   border: 0.1px thin #4169e1;
   box-shadow: 0 0 18px #4169e1;
 }
-.pic-Box {
-  width: 205px;
-  height: 250px;
+.taskCard-Heading {
+  width: 190px;
+  height: 45px;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
   display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-}
-.choose-File {
-  width: 200px;
-  height: 30px;
-  display:flex;
-}
-.input-Pic {
-  width: 200px;
-  height: 200px;
+  justify-content: center;
+  align-items: center;
+  color: #4169e1;
+  -webkit-text-stroke: 0.6px;
+  letter-spacing: 0.8px;
+  text-align: center;
+  cursor: pointer;
+  transition: font-size 0.3s ease, color 0.3s ease;
+  box-shadow: 0 0 4px #4169e1;
   border-radius: 20px;
   border-top-left-radius: 3px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.input-Pic {
+  width: 190px;
+  height: 190px;
+  border-radius: 20px;
+  border-top-left-radius: 3px;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  color: #4169e1;
+  -webkit-text-stroke: 0.6px;
+  letter-spacing: 0.5px;
   display: flex;
   justify-content: center;
   align-items: center;
   outline: none;
   text-align: center;
   background-color: white;
-  border: 1.4px dotted #4169e1;
-  transition: box-shadow 0.4s ease, border 0.4s ease-in-out;
+  border: 1.6px dotted #4169e1;
+  transition: box-shadow 0.3s ease, border 0.3s ease-in-out;
   outline: #4169e1;
+  cursor: pointer;
 }
 .input-Pic:hover {
   border: 1.4px dotted #e3e9ff;
@@ -91,7 +148,13 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: left;
+  /* align-items: left; */
+}
+.task-titleBox,
+.task-DescriptBox {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 .label {
   font-family: "Poppins", sans-serif;
@@ -113,7 +176,7 @@
   border: 1.5px solid #4169e1;
   border-radius: 20px;
   border-top-left-radius: 3px;
-  transition: box-shadow 0.4s ease, border 0.4s ease-in-out;
+  transition: box-shadow 0.3s ease, border 0.3s ease-in-out;
   outline: #4169e1;
 }
 .input-Title:hover {
@@ -122,7 +185,7 @@
 }
 .input-Descript {
   width: 350px;
-  height: 100px;
+  height: 110px;
   font-family: "Poppins", sans-serif;
   font-size: 14px;
   color: #6e6e6f;
@@ -138,7 +201,7 @@
   align-items: flex-start;
   text-align: left;
   outline: #4169e1;
-  transition: box-shadow 0.4s ease, border 0.4s ease-in-out;
+  transition: box-shadow 0.3s ease, border 0.3s ease-in-out;
 }
 .input-Descript:hover {
   border: 1.4px solid #e3e9ff;
@@ -151,7 +214,7 @@
   align-items: center;
 }
 .addTask-Btn {
-  width: 250px;
+  width: 200px;
   height: 50px;
   font-size: 16px;
   color: #e3e9ff;
@@ -159,7 +222,6 @@
   -webkit-text-stroke: 0.9px;
   background-color: #4169e1;
   border-style: none;
-  /* border: 0.1px solid #4169e1; */
   border-radius: 20px;
   border-top-left-radius: 3px;
   cursor: pointer;

@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./TaskPage.css";
+import "./TaskListOut.css";
 import { Formik, Form, Field, ErrorMessage } from "formik";
+import TaskifyLogo from "../Assessts/images/mainapplogo.png";
 
 function TaskPage() {
   const [tasks, setTasks] = useState([]);
@@ -47,94 +49,129 @@ function TaskPage() {
 
   return (
     <div className="task-Page">
-      <div className="task-InputCard">
-        <Formik initialValues={initialValues} onSubmit={handleAddTask}>
-          {({ values, handleChange, handleBlur }) => (
-            <Form className="task-Form">
-              <div className="task-Inputs">
-                <div className="pic-Box">
-                  <label htmlFor="pic" className="label">
-                    Add Pic:
-                  </label>
-                  {/* Display selected image */}
-                  {selectedImage && (
-                    <img
-                      src={selectedImage}
-                      alt="Selected"
-                      // style={{ maxWidth: "200px",maxHeight: "200px" }}
-                      className="input-Pic"
+      <div className="left-TaskPage">
+        {/* APP LOGO CARD */}
+        <div className="appLogo-Card">
+          <img src={TaskifyLogo} alt="TaskifyLogo" className="appLogo" />
+          <h1 className="appLogo-Name">TASKiFY</h1>
+        </div>
+
+        {/* ADD TASK INPUT CARD */}
+        <div className="task-InputCard">
+          <Formik
+            initialValues={editTask || initialValues}
+            onSubmit={handleAddTask}
+          >
+            {({ values, handleChange, handleBlur }) => (
+              <Form className="task-Form">
+                <h3 className="taskCard-Heading">Add your Task</h3>
+                <div className="task-Inputs">
+                  <div className="pic-Box">
+                    <label htmlFor="pic" className="label">
+                      Add Pic:
+                    </label>
+                    {/* Display selected image */}
+                    <div className="input-Pic">
+                      {selectedImage && (
+                        <img
+                          src={selectedImage}
+                          alt="Selected"
+                          style={{
+                            maxWidth: "180px",
+                            maxHeight: "180px",
+                            backgroundColor: "#e3e9ff",
+                          }}
+                          placeholder="Add"
+                        />
+                      )}
+                    </div>
+                    <input
+                      type="file"
+                      id="pic"
+                      name="pic"
+                      onChange={handleImageChange}
+                      className="choose-File"
                     />
-                  )}
-                  <input
-                    type="file"
-                    id="pic"
-                    name="pic"
-                    onChange={handleImageChange}
-                    className="choose-File"
-                  />
-                  <ErrorMessage name="pic" />
-                </div>
+                    <ErrorMessage name="pic" />
+                  </div>
 
-                <div className="task-TextInputs">
-                  <label htmlFor="title" className="label">
-                    Title:
-                  </label>
-                  <Field
-                    type="text"
-                    name="title"
-                    placeholder="Title"
-                    values={Formik.value}
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                    className="input-Title"
-                  />
-                  <ErrorMessage name="title" />
+                  <div className="task-TextInputs">
+                    <div className="task-titleBox">
+                      <label htmlFor="title" className="label">
+                        Title:
+                      </label>
+                      <Field
+                        type="text"
+                        name="title"
+                        placeholder="Title"
+                        values={Formik.value}
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                        className="input-Title"
+                      />
+                      <ErrorMessage name="title" />
+                    </div>
 
-                  <label htmlFor="description" className="label">
-                    Description:
-                  </label>
-                  <Field
-                    type="text"
-                    name="description"
-                    placeholder="Description"
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                    className="input-Descript"
-                  />
-                  <ErrorMessage name="description" />
+                    <div className="task-DescriptBox">
+                      <label htmlFor="description" className="label">
+                        Description:
+                      </label>
+                      <Field
+                        type="text"
+                        name="description"
+                        placeholder="Description"
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                        className="input-Descript"
+                      />
+                      <ErrorMessage name="description" />
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <div className="addTaskBtn-Box">
-                <button type="submit" className="addTask-Btn">
-                  Add Task
-                </button>
-              </div>
-            </Form>
-          )}
-        </Formik>
+                <div className="addTaskBtn-Box">
+                  <button type="submit" className="addTask-Btn">
+                    Add Task
+                  </button>
+                </div>
+              </Form>
+            )}
+          </Formik>
+        </div>
       </div>
 
       {/* RENDER TASK CARD */}
 
-      <div className="task-ListCard">
-        <button onClick={handleDeleteAllTasks} className="deleteAll-Btn">
-          Delete All Tasks
-        </button>
-        {tasks.map((task) => (
-          <div key={task.id} className="task-Board">
-            <input type="checkbox" className="check-Box" />
-            <span className="task-Name">{task.title}</span>
-            <button onClick={() => handleEditTask(task)} className="edit-Task">
-              Edit
-            </button>
-            <button
-              onClick={() => handleDeleteTask(task.id)}
-              className="delete-Task"
-            >
-              Delete
-            </button>
-          </div>
-        ))}
+      <div className="right-TaskPage">
+        {/* LOGOUT BUTTON CARD */}
+        <div className="logout-Card">
+          <div className="account-Name"> My Taskify</div>
+          <button className="logout-Btn">Logout</button>
+        </div>
+        {/* TASK LIST CARD  */}
+        <div className="task-ListCard">
+          <h3 className="taskCard-Heading">Your Task Hub</h3>
+          {tasks.map((task) => (
+            <div key={task.id} className="task-Board">
+              <input type="checkbox" className="check-Box" />
+              <span className="task-Name">{task.title}</span>
+              <button
+                onClick={() => handleEditTask(task)}
+                className="edit-Task"
+              >
+                Edit
+              </button>
+              <button
+                onClick={() => handleDeleteTask(task.id)}
+                className="deleteTask-Btn"
+              >
+                Delete
+              </button>
+            </div>
+          ))}
+          <button onClick={handleDeleteAllTasks} className="deleteAll-Btn">
+            Delete All
+          </button>
+        </div>
       </div>
     </div>
   );
