@@ -33,7 +33,7 @@ function TaskPage() {
     const updatedTasks = tasks.filter((task) => task.id !== id);
     setTasks(updatedTasks);
   };
-
+  
   const handleDeleteAllTasks = () => {
     setTasks([]);
   };
@@ -149,25 +149,27 @@ function TaskPage() {
         </div>
         {/* TASK LIST CARD  */}
         <div className="task-ListCard">
-          <h3 className="taskCard-Heading">Your Task Hub</h3>
-          {tasks.map((task) => (
-            <div key={task.id} className="task-Board">
-              <input type="checkbox" className="check-Box" />
-              <span className="task-Name">{task.title}</span>
-              <button
-                onClick={() => handleEditTask(task)}
-                className="edit-Task"
-              >
-                Edit
-              </button>
-              <button
-                onClick={() => handleDeleteTask(task.id)}
-                className="deleteTask-Btn"
-              >
-                Delete
-              </button>
-            </div>
-          ))}
+          <h3 className="taskListCard-Heading">Your Task Hub</h3>
+          <div className="taskList-Board">
+            {tasks.map((task) => (
+              <div key={task.id} className="task-List">
+                <input type="checkbox" className="check-Box" />
+                <span className="task-Name">{task.title}</span>
+                <button
+                  onClick={() => handleEditTask(task)}
+                  className="edit-Task"
+                >
+                  Edit
+                </button>
+                <button
+                  onClick={() => handleDeleteTask(task.id)}
+                  className="deleteTask-Btn"
+                >
+                  Delete
+                </button>
+              </div>
+            ))}
+          </div>
           <button onClick={handleDeleteAllTasks} className="deleteAll-Btn">
             Delete All
           </button>
