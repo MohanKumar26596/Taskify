@@ -15,7 +15,7 @@ function TaskPage() {
     description: "",
   };
 
-  const handleAddTask = (values, { resetForm }) => {
+  const handleAddTask = (values) => {
     const { title, pic, description } = values;
     if (title && pic && description) {
       const newTask = {
@@ -25,15 +25,18 @@ function TaskPage() {
         description,
       };
       setTasks([...tasks, newTask]);
-      resetForm();
-    }
+      // if (resetForm) {
+        //   resetForm();
+        // }
+      }
+      console.log(values);
   };
 
   const handleDeleteTask = (id) => {
     const updatedTasks = tasks.filter((task) => task.id !== id);
     setTasks(updatedTasks);
   };
-  
+
   const handleDeleteAllTasks = () => {
     setTasks([]);
   };
@@ -42,8 +45,8 @@ function TaskPage() {
     setEditTask(task);
   };
 
-  const handleImageChange = (event) => {
-    const file = event.currentTarget.files[0];
+  const handleImageChange = (e) => {
+    const file = e.currentTarget.files[0];
     setSelectedImage(URL.createObjectURL(file));
   };
 
@@ -60,7 +63,9 @@ function TaskPage() {
         <div className="task-InputCard">
           <Formik
             initialValues={editTask || initialValues}
-            onSubmit={handleAddTask}
+            onSubmit={(values, { resetForm }) => {
+              handleAddTask(values);
+            }}
           >
             {({ values, handleChange, handleBlur }) => (
               <Form className="task-Form">
@@ -129,7 +134,11 @@ function TaskPage() {
                   </div>
                 </div>
                 <div className="addTaskBtn-Box">
-                  <button type="submit" className="addTask-Btn">
+                  <button
+                    type="submit"
+                    className="addTask-Btn"
+                    onSubmit={handleAddTask}
+                  >
                     Add Task
                   </button>
                 </div>
@@ -144,13 +153,14 @@ function TaskPage() {
       <div className="right-TaskPage">
         {/* LOGOUT BUTTON CARD */}
         <div className="logout-Card">
-          <div className="account-Name"> My Taskify</div>
+          <div className="account-Name">My Taskify</div>
           <button className="logout-Btn">Logout</button>
         </div>
         {/* TASK LIST CARD  */}
         <div className="task-ListCard">
           <h3 className="taskListCard-Heading">Your Task Hub</h3>
           <div className="taskList-Board">
+            {/* Render tasks from the 'tasks' state */}
             {tasks.map((task) => (
               <div key={task.id} className="task-List">
                 <input type="checkbox" className="check-Box" />

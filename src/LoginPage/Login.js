@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../LoginPage/Login.css";
-import EyeClose from "../Assessts/images/eye-Close.svg";
-import EyeOpen from "../Assessts/images/eye-Open.svg";
+import EyeClose from "../Assessts/Icons/CamOn.png";
+import EyeOpen from "../Assessts/Icons/CamOff.png";
 import { useNavigate } from "react-router-dom";
 import TaskifyLogo from "../Assessts/images/mainapplogo.png";
 

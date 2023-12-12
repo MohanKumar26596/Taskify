@@ -13,7 +13,7 @@ function Header() {
     <div className="header">
       <div className="app-Describe">
         <p className="description">
-          A to-do list is a tool used to organize tasks or activities that need
+          Taskify is a tool used to organize tasks or activities that need
           to be completed, typically within a certain timeframe. It's a simple
           yet effective way to manage and prioritize tasks, whether they're
           related to work, personal goals, errands, or any other aspect of life.
